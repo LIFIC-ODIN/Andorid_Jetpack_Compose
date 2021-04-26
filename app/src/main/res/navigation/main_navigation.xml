@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/FragmentSplash">
+
+    <fragment
+        android:id="@+id/FragmentSplash"
+        android:name="com.odin.composefragment.screen.fragment.splash.SplashFragment"
+        android:label="splash">
+
+        <action android:id="@+id/action_splash_to_main"
+            app:destination="@id/FragmentMain"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentMain"
+        android:name="com.odin.composefragment.screen.fragment.main.MainFragment"
+        android:label="main">
+
+        <action android:id="@+id/action_main_to_signupemail"
+            app:destination="@id/FragmentSignUpEmail"/>
+        <action android:id="@+id/action_main_to_signuppass"
+            app:destination="@id/FragmentSignUpPassWord"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentSignUpEmail"
+        android:name="com.odin.composefragment.screen.fragment.main.signUpEmail.SignUpEmailFragment"
+        android:label="signupemail">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentSignUpPassWord"
+        android:name="com.odin.composefragment.screen.fragment.main.signUpPassWord.SignUpPassWordFragment"
+        android:label="signuppassword">
+
+    </fragment>
+</navigation>
